@@ -7,23 +7,80 @@
     <!-- daisi ui linkk -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-        <menu class="flex">
-            <h1 class="flex-1">P-Ticket</h1>
-            <ul  class="flex flex-1">
+    <header class=" w-4/5 mx-auto relative">
+        <menu class="flex justify-between mt-12">
+            <h1 class="text-[#030712] text-4xl text-center font-bold">P-Ticket</h1>
+            <ul  class="hidden lg:flex flex-1 justify-center text-[#030712B3] text-xl gap-14">
                 <li>Home</li>
                 <li>About</li>
                 <li>Destination</li>
                 <li>Search</li>
             </ul>
-            <button class="flex flex-1">
+            <button class="flex gap-3 px-8 py-3 rounded-lg text-right text-xl lg:items-center border bg-green-50 border-green-500 text-center text-green-500 font-semibold">
                 Bus
                 <img src="images/bus-icon.png" alt="">
             </button>
         </menu>
+        <!-- banner area -->
+        <div class="bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center space-y-8 rounded-lg  mt-12 pt-24 pb-44">
+            <h1 class="text-5xl lg:text-7xl text-white font-bold text-center">End-to-End Travel with <br> <span class="text-green-500">P Paribahan</span></h1>
+            <p class="text-white text-[18px] text-center w-full lg:w-[30%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            <button class="px-8 py-3 rounded-lg text-xl flex justify-center items-center border bg-green-500 border-green-500 text-center text-[#030712] font-semibold mx-auto">
+                Buy Tickets
+            </button>
+        </div>
+        <!--shortsection area-->
+        <div class="flex flex-wrap gap-8 justify-center z-10 -mt-16">
+            <!-- first items -->
+            <div class="flex gap-4 bg-white px-16 py-8 rounded-3xl border-b-green-500 border-b-4 shadow-sm">
+                <div><img src="images/people.png" alt=""></div>
+                <div class="">
+                    <h2 class="text-[#030712], text-4xl font-bold">500K+</h2>
+                    <p class="text-[#030712B3] text-xl">Registered users</p>
+                </div>
+            </div>
+            <!-- second items -->
+            <div class="flex gap-4 bg-white px-16 py-8 rounded-3xl border-b-green-500 border-b-4 shadow-sm">
+                <div><img src="images/ticket-cupon.png" alt=""></div>
+                <div class="">
+                    <h2 class="text-[#030712], text-4xl font-bold">1.7 lacks</h2>
+                    <p class="text-[#030712B3] text-xl">Tickets sold</p>
+                </div>
+            </div>
+            <!-- third items -->
+            <div class="flex gap-4 bg-white px-16 py-8 rounded-3xl border-b-green-500 border-b-4 shadow-sm">
+                <div><img src="images/stoppage.png" alt=""></div>
+                <div>
+                    <h2 class="text-[#030712], text-4xl font-bold">800K+</h2>
+                    <p class="text-[#030712B3] text-xl">Rental partners</p>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <section class=" mt-28">
+        <h1 class="text-center text-5xl font-bold text-[#030712]">Best offers for you</h1>
+        <div>
+            <!-- offer one -->
+            <div class="flex">
+                <div class="bg-[#FFBF0F] p-14 rounded-3xl space-y-4">
+                    <h2 class="text-[#030712CC], text-5xl font-black">15% OFF</h2>
+                    <h5 class="text-[#030712] text-xl font-semibold">on your next purchase</h5>
+                    <p class="text-[#030712B3] text-xl "> use by January 2024</p>
+                </div>
+                <div class="bg-[#FFBF0F] p-14 rounded-3xl space-y-4">
+                    <h5 class="text-[#030712] text-4xl font-bold">NEW15</h5>
+                    <p class="text-[#030712B3] text-xl "> Coupon Code</p>
+                <div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
