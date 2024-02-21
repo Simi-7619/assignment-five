@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- style -->
     <style>
+        html {
+                scroll-behavior: smooth;
+            }
         .seat{
             background-color: rgba(128, 128, 128, 0.2);
             padding:20px 70px;
@@ -34,17 +37,16 @@
                 <li>Destination</li>
                 <li>Search</li>
             </ul>
-            <button class="flex gap-3 px-8 py-3 rounded-lg text-right text-xl lg:items-center border bg-green-50 border-green-500 text-center text-green-500 font-semibold">
+            <a href="#buy-tickets"><button class="flex gap-3 px-8 py-3 rounded-lg text-right text-xl lg:items-center border bg-green-50 border-green-500 text-center text-green-500 font-semibold">
                 Bus
-                <img src="images/bus-icon.png" alt="">
-            </button>
+                <img src="images/bus-icon.png" alt=""></button></a>
         </menu>
         <!-- banner area -->
         <div class="bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center space-y-8 rounded-lg  mt-12 pt-24 pb-44">
             <h1 class="text-5xl lg:text-7xl text-white font-bold text-center">End-to-End Travel with <br> <span class="text-green-500">P Paribahan</span></h1>
             <p class="text-white text-[18px] text-center w-full lg:w-[30%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
             <button class="px-8 py-3 rounded-lg text-xl flex justify-center items-center border bg-green-500 border-green-500 text-center text-[#030712] font-semibold mx-auto">
-                Buy Tickets
+               <a href="#buy-tickets"> Buy Tickets</a>
             </button>
         </div>
         <!--shortsection area-->
@@ -88,7 +90,7 @@
                     <p class="text-[#030712B3] text-xl "> use by January 2024</p>
                 </div>
                 <div class="bg-[#FFBF0F] p-14 rounded-br-3xl rounded-tr-3xl space-y-4">
-                    <h5 class="text-[#030712] text-4xl font-bold">NEW15</h5>
+                    <h5 class="text-[#030712] text-4xl font-bold" id="couponOne">NEW15</h5>
                     <p class="text-[#030712B3] text-xl "> Coupon Code</p>
                 </div>
 
@@ -101,7 +103,7 @@
                     <p class="text-[#030712B3] text-xl "> use by January 2024</p>
                 </div>
                 <div class="bg-[#F78C9C] p-14 rounded-br-3xl rounded-tr-3xl space-y-4">
-                    <h5 class="text-[#030712] text-4xl font-bold">Couple 20</h5>
+                    <h5 class="text-[#030712] text-4xl font-bold" id="couponTwo">Couple 20</h5>
                     <p class="text-[#030712B3] text-xl "> Coupon Code</p>
                 </div>
 
@@ -132,7 +134,7 @@
                             </div>
                             <button class="flex flex-wrap  gap-3 px-8 py-3 rounded-lg text-right text-xl lg:items-center border bg-green-100 border-green-500 text-center text-green-500 font-semibold">
                                 <img src="images/seat-green.png" alt="">
-                                32 seats left
+                                <span id="seat-left">32</span>seats left
                             </button>
                             
                         </div>
@@ -165,7 +167,7 @@
         </div>
 
             <!-- ********************seat booking section************** -->
-        <div class="bg-white p-10 rounded-2xl  mt-12  w-4/5 mx-auto flex justify-between">
+        <div id="buy-tickets" class="bg-white p-10 rounded-2xl  mt-12  w-4/5 mx-auto flex justify-between">
             <!-- seat selection -->
             <div class="flex-1 border-r-2 border-dashed border-gray-300 pr-5">
                 <h3 class="text-2xl font-semibold p-5 border-b border-dashed border-gray-300">Select Your Seat</h3>  
@@ -176,7 +178,7 @@
                     </div>
                     <div class="flex gap-3 p-5">
                         <img src="images/seat-green-filled.png" alt="">
-                        <p class="text-xl text-green-500">Available</p>
+                        <p class="text-xl text-green-500">Selected</p>
                     </div>
                 </div>
                 <div class="text-right flex justify-end">
@@ -280,12 +282,12 @@
                 <h3 class="text-2xl font-semibold p-5 border-b border-dashed border-gray-300">Compare Your Seat</h3>
                 <div class="bg-gray-100 p-5 pb-3 rounded-2xl mt-5" >
                     <div class="pb-3 rounded-2xl flex justify-between gap-12 mt-5 border-b-2 border-dashed border-gray-300">
-                        <p class="text-lg font-medium">Seats <span class="bg-green-500 px-3 py-1 rounded-2xl text-white">0</span></p>
+                        <p class="text-lg font-medium">Seats <span id="total-seat" class="bg-green-500 px-3 py-1 rounded-2xl text-white">0</span></p>
                         <p class="text-lg font-medium">Class</p>
                         <p class="text-lg font-medium">Price</p>
                     </div>
                     <!-- seat will be added here -->
-                    <div>
+                    <div id="selected-seat">
 
                     </div>
                     <!-- grand total calculation -->
@@ -293,12 +295,12 @@
                         <p class="text-xl font-semibold">Total Price</p>
                         <p class="text-lg font-medium">
                             BDT
-                            <span>000</span>
+                            <span id="totalCost">000</span>
                         </p>
                     </div>
-                    <div class="bg-white rounded-3xl">
-                        <input type="text"class="font-semibold text-lg px-4 py-2 border-none outline-none col-span-3 h-full " placeholder="Place your coupon?"> 
-                        <button type="button" class="btn col-span-1 bg-green-500 text-base text-white inter font-medium" disabled>
+                    <div id="applyAndInput" class="bg-white rounded-3xl">
+                        <input type="text" id="coupon" class="font-semibold text-lg px-4 py-2 border-none outline-none col-span-3 h-full " placeholder="Place your coupon?"> 
+                        <button id="apply" type="button" class="btn col-span-1 bg-green-500 text-base text-white inter font-medium" disabled>
                             Apply
                          </button>
                     </div>
@@ -306,28 +308,28 @@
                         <p class="text-xl font-semibold">Grand Total</p>
                         <p class="text-lg font-medium">
                             BDT
-                            <span>000</span>
+                            <span id="grand-total">000</span>
                         </p>
                     </div>
                     <!-- form area -->
-                    <form action="" class=" min-h-96 mt-6">
+                    <form action="./pages/Success.html" class=" min-h-96 mt-6">
                         <label for="name" class="block inter text-base font-medium mb-3">Passenger Name*</label>
                         <input type="text" id="name" placeholder="Enter your name" class="block mb-3 outline-none w-full border-2 border-[#e6e6e7] h-16 px-3 py-2 inter text-base text-black rounded-xl">
                         <label for="number" class="block mb-3 inter text-base font-medium">Phone Number*</label>
-                        <input type="number" id="number" inputmode="numeric" placeholder="Enter your phone number" required class="block outline-none w-full mb-3 border-2 border-[#e6e6e7] h-16 px-3 py-2 inter text-base text-black rounded-xl">
+                        <input type="text" id="number" inputmode="numeric" placeholder="Enter your phone number" required class="block outline-none w-full mb-3 border-2 border-[#e6e6e7] h-16 px-3 py-2 inter text-base text-black rounded-xl">
                         <label for="email" class="block mb-3 inter text-base font-medium">Email ID</label>
                         <input type="email" id="email" placeholder="Enter your email id" class="block outline-none w-full border-2 border-[#e6e6e7] h-16 px-3 py-2 inter text-base text-black rounded-xl">
                   
-                        <button disabled  id="next"  type="submit" class="mt-7 rounded-xl w-full h-14 btn bg-green-500 text-xl railway font-extrabold text-white  bg-[#1DD1001A] hover:bg-[#000] hover:border-green-500 hover:text-white">
+                        <button disabled  id="next"  type="submit" class="mt-7 rounded-xl w-full h-14 btn bg-[#1DD100] uppercase text-xl railway font-extrabold text-white">
                            Next
+                  
                         </button>
                   
                      </form>
-
-                    <div class="condition  flex gap-4 items-center justify-center mt-2">
+                     <div class="condition  flex gap-4 items-center justify-center mt-2">
                         <a href="" class="text-[#696a71] inter text-base font-normal underline">Terms and Conditions</a>
                         <a href="" class="text-[#696a71] inter text-base font-normal underline">Cancellation Policy</a>
-                    </div>
+                     </div>
                 </div>
             </div>
        </div>
@@ -367,5 +369,8 @@
 
 
     </footer>
+
+    <!-- external js file -->;
+    <script src="JS/script.js"></script>
 </body>
 </html>
