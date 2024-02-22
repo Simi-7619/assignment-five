@@ -83,17 +83,18 @@ for(const seat of seats){
     applyButton.addEventListener('click',couponFinder)
 
     function couponFinder(number){
+        let totalCost = stringValue('totalCost');
         let inputValue =document.getElementById('coupon').value;
         let couponOne =  document.getElementById('couponOne').innerText;
         let couponTwo= document.getElementById('couponTwo').innerText;
         
         if(inputValue === couponOne){
             document.getElementById('applyAndInput').classList.add('hidden')
-            document.getElementById('grand-total').innerText = '1870';
+            document.getElementById('grand-total').innerText = (totalCost- totalCost*15/100);
 
         }else if(inputValue === couponTwo){
             document.getElementById('applyAndInput').classList.add('hidden')
-            document.getElementById('grand-total').innerText = '1760';
+            document.getElementById('grand-total').innerText = (totalCost- totalCost*20/100);
         }else{
           alert("Sorry! Your coupon is invalid")
         }

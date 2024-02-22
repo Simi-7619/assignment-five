@@ -24,6 +24,12 @@
         .seat:hover{
             background-color: rgba(128, 128, 128, 0.43);
         }
+
+        .click-button:hover{
+            background-color: black;
+            color: white;
+            border: 0;
+        }
     </style>
 
 </head>
@@ -45,7 +51,7 @@
         <div class="bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center space-y-8 rounded-lg  mt-12 pt-24 pb-44">
             <h1 class="text-5xl lg:text-7xl text-white font-bold text-center">End-to-End Travel with <br> <span class="text-green-500">P Paribahan</span></h1>
             <p class="text-white text-[18px] text-center w-full lg:w-[30%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-            <button class="px-8 py-3 rounded-lg text-xl flex justify-center items-center border bg-green-500 border-green-500 text-center text-[#030712] font-semibold mx-auto">
+            <button class="click-button px-8 py-3 rounded-lg text-xl flex justify-center items-center border bg-green-500 border-green-500 text-center text-[#030712] font-semibold mx-auto">
                <a href="#buy-tickets"> Buy Tickets</a>
             </button>
         </div>
@@ -320,7 +326,7 @@
                         <label for="email" class="block mb-3 inter text-base font-medium">Email ID</label>
                         <input type="email" id="email" placeholder="Enter your email id" class="block outline-none w-full border-2 border-[#e6e6e7] h-16 px-3 py-2 inter text-base text-black rounded-xl">
                   
-                        <button disabled  id="next"  type="submit" class="mt-7 rounded-xl w-full h-14 btn bg-[#1DD100] uppercase text-xl railway font-extrabold text-white">
+                        <button disabled  id="next"  type="submit" class="click-button mt-7 rounded-xl w-full h-14 btn bg-[#1DD100] uppercase text-xl railway font-extrabold text-white">
                            Next
                   
                         </button>
